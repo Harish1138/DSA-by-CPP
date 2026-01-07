@@ -39,8 +39,11 @@ void move_zero(vector<int> &arr) {
 }
 int main() {
     int n;
+    cout<<"Enter Number of Elements: ";
     cin>>n;
+
     vector<int> arr(n);
+    cout<<"Enter Elements: ";
     for (int i=0;i<n;i++) {
         cin>>arr[i];
 

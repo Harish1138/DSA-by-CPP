@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 // Brute solution
-// Option solution available after the main function
+// Optimal solution available after the main function
 
 // int main() {
 //     int n;

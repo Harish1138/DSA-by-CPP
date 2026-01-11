@@ -10,6 +10,9 @@ int main() {
     }
     int maxi=0;
     int count=0;
+    // Optimal solution
+    // TIme complexity: O(n)
+    // Space Complexity: O(1)
     for (int i=0;i<n;i++) {
         if (arr[i]==1) {
             count++;

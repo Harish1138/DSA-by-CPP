@@ -34,27 +34,28 @@ int main() {
     vector<int> arr(n);
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
-
     }
     int k;
     cin >> k;
-    int sum=0;
-    int maxLen=0;
+    int sum = 0;
+    int maxLen = 0;
     map<int, int> mpp;
-    for (int i=0;i<n;i++) {
-        sum+=arr[i];
-        if (sum==k) {
-            maxLen=max(maxLen,i+1);
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+        if (sum == k) {
+            maxLen = max(maxLen, i + 1);
         }
-        int more=sum-k;
-        if (mpp.find(more)!=mpp.end()) {
-            int len=i-mpp[more];
-            maxLen=max(maxLen,len);
+        int more = sum - k;
+        if (mpp.find(more) != mpp.end()) {
+            int len = i - mpp[more];
+            maxLen = max(maxLen, len);
         }
-        if (mpp.find(sum)==mpp.end()) {
-            mpp[sum]=i;
+        if (mpp.find(sum) == mpp.end()) {
+            mpp[sum] = i;
         }
-
     }
-    cout<<maxLen<<endl;
+    for (auto it: mpp) {
+        cout << it.first << " " << it.second << endl;
+    }
+    cout << maxLen << endl;
 }
